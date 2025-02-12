@@ -1,4 +1,4 @@
-import { Plugin, ResolvedConfig, ViteDevServer } from 'vite';
+import { Plugin, ResolvedConfig } from 'vite';
 import { existsSync, rmSync } from 'fs';
 import { escapePHP, unescapePHP } from './utils/escapePHP';
 import { resolve } from 'path';
