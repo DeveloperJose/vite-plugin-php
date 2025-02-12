@@ -146,7 +146,7 @@ function usePHP(cfg: UsePHPConfig = {}): Plugin[] {
 								throw error;
 							});
 
-							const url = new URL(req.url, 'http://127.0.0.1');
+							const url = new URL(req.url, 'http://localhost');
 							if (config?.server.port) {
 								url.port = config.server.port.toString();
 							}
