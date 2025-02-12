@@ -7,7 +7,7 @@ function start(root: string) {
 
 		globalThis.php = spawn(phpServer.binary, [
 			'-S',
-			'localhost:' + phpServer.port,
+			'127.0.0.1:' + phpServer.port,
 			'-t',
 			root,
 			fileURLToPath(routerFileUrl),
