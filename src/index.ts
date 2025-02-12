@@ -49,7 +49,7 @@ function usePHP(cfg: UsePHPConfig = {}): Plugin[] {
 
 	function onExit() {
 		if (config?.command === 'serve') {
-			phpServer.stop();
+			// phpServer.stop();
 
 			devCleanup && cleanupTemp();
 		}
@@ -126,7 +126,7 @@ function usePHP(cfg: UsePHPConfig = {}): Plugin[] {
 			configureServer(server) {
 				viteServer = server;
 
-				phpServer.start(viteServer?.config.root);
+				// phpServer.start(viteServer?.config.root);
 
 				server.middlewares.use(async (req, res, next) => {
 					try {
@@ -146,7 +146,7 @@ function usePHP(cfg: UsePHPConfig = {}): Plugin[] {
 								throw error;
 							});
 
-							const url = new URL(req.url, 'http://localhost');
+							const url = new URL(req.url, 'http://app');
 							if (config?.server.port) {
 								url.port = config.server.port.toString();
 							}

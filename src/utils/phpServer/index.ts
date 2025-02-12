@@ -42,7 +42,7 @@ function stop() {
 
 const phpServer = {
 	binary: 'php',
-	port: 65535,
+	port: 9000,
 	start,
 	stop,
 };
