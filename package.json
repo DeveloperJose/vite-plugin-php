@@ -60,7 +60,8 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "npx unbuild",
-		"prepack": "npm run build"
+		"prepack": "npm run build",
+		"prepare": "npm run build"
 	},
 	"type": "module",
 	"types": "./dist/index.d.ts"
