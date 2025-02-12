@@ -35,7 +35,7 @@ function usePHP(cfg: UsePHPConfig = {}): Plugin[] {
 	phpServer.binary = binary;
 
 	let config: undefined | ResolvedConfig = undefined;
-	let viteServer: undefined | ViteDevServer = undefined;
+	// let viteServer: undefined | ViteDevServer = undefined;
 
 	let entries = Array.isArray(entry) ? entry : [entry];
 
@@ -124,7 +124,7 @@ function usePHP(cfg: UsePHPConfig = {}): Plugin[] {
 				});
 			},
 			configureServer(server) {
-				viteServer = server;
+				// viteServer = server;
 
 				// phpServer.start(viteServer?.config.root);
 
