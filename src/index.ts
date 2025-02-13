@@ -146,10 +146,11 @@ function usePHP(cfg: UsePHPConfig = {}): Plugin[] {
 								throw error;
 							});
 
-							const url = new URL(req.url, 'http://app');
-							if (config?.server.port) {
-								url.port = config.server.port.toString();
-							}
+							const url = new URL(req.url, 'http://web');
+							// if (config?.server.port) {
+							// 	url.port = config.server.port.toString();
+							// }
+							url.port = "9000";
 							const requestUrl = url.pathname;
 
 							if (url.pathname.endsWith('/')) {
